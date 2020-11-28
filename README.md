@@ -1,4 +1,4 @@
-This is a simple ideabox app that is part of the Turing School's Front End program and serves as an introduction to Redux
+This is a simple ideabox app that is part of the Turing School's Front End program and serves as an introduction to Redux and is part of the pre-work for mod-4
 
 ### Setup
 

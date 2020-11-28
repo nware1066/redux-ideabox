@@ -1,12 +1,20 @@
 import React from 'react';
+import {completeTodo} from '../actions'
+import { connect } from 'react-redux'
 
-const ToDo = ({ id, text, completed }) => {
+const ToDo = ({ id, text, completed, completeTodo }) => {
   return (
-    <li>
+    <li
+    className={completed ? 'completed' : 'not-completed'}
+    onClick={() => completeTodo(id)}
+    >
       {text}
     </li>
   )
 }
 
+const mapDispatchToProps = dispatch => ({
+  completeTodo: id => dispatch(completeTodo(id))
+})
 
-export default ToDo;
+export default connect(null, mapDispatchToProps)(ToDo);
